@@ -14,7 +14,10 @@ namespace ConsoleApp1
 
             new GeneralList().Run(57);
 
+
         }
+
+
 
 
         class GeneralList
@@ -33,6 +36,7 @@ namespace ConsoleApp1
                 for (int i = 0; i < LEN; i++)
                 {
                     ListQ.Add(r.Next(100));
+
                 }
                 this.findTwoNumbersThatAddUpTo(AddUpToNumber);
 
@@ -43,12 +47,30 @@ namespace ConsoleApp1
 
             public void findTwoNumbersThatAddUpTo(int number)
             {
+                foreach (int num in ListQ)
+                {
+                    int f, d;
+                    f = num;
+                    foreach (int num2 in ListQ)
+                    {
+                        d = num2;
+                        if (f + d == 57)
+                        {
+                            Console.WriteLine("The two numbers between 0 and 100 whose sum is 57 are found. Numbers are: " + f + " " + d);
+                        }
+                    }
 
-                number = AddUpToNumber;
 
+                }
+                Console.ReadLine();
 
 
             }
+
+
+
+
+
 
 
 
